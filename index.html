@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      .container{
+        position: relative;
+        width: 180px;
+        float: left;
+        margin-left: 10px;
+      }
+      .image{
+        display: block;
+        height: 250px;
+        width: 180px;
+      }
+      .overly{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 250px;
+        width: 180px;
+        opacity: 0;
+        transition: 1s ease;
+        background-color: crimson;
+      }
+      .container:hover .overly{
+        opacity: 1;
+      }
+      .text{
+        color: whitesmoke;
+        font-size: 20px;
+        position: absolute;
+        top: 40%;
+        margin-left: 30px;
+       
+      }
+
+
+      .images{
+        opacity: 1;
+        display: block;
+        height: 250px;
+        width: 180px;
+        transition: .5s ease;
+        backface-visibility: hidden;
+      }
+      .overlyy{
+        position:absolute;
+        top: 40%;
+        left: 30%;
+        opacity: 0;
+        transition: .5s ease;
+      }
+      .container:hover .images{
+        opacity: 0.3;
+      }
+      .container:hover .overlyy{
+        opacity: 1;
+      }
+      .texts a{
+        background-color:black;
+        color: whitesmoke;
+        padding: 10px;
+        font-size: 20px;
+        text-decoration: none;
+        border-radius:10%;
+      }
+
+      .img1{
+        display: block;
+        height: 250px;
+        width: 180px;
+      }
+      .overly1{
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        height: 0px;
+        width: 180px;
+        background-color: crimson;
+        transition: .5s ease;
+        overflow: hidden;
+      }
+      .container:hover .overly1{
+        bottom: 0;
+        height: 100%;
+      }
+      .text1{
+        white-space: nowrap;
+        font-size: 20px;
+        margin-top: 50%;
+        margin-left: 35px;
+        color: whitesmoke;
+      }
+
+      .img2{
+        display: block;
+        height: 250px;
+        width: 180px;
+      }
+      .overly2{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: 0px;
+        width: 180px;
+        background-color:tomato;
+        overflow: hidden;
+        transition: .5s ease;
+      }
+      .container:hover .overly2{
+        top:0px;
+        height: 100%;
+      }
+      .text2{
+        white-space: nowrap;
+        font-size: 20px;
+        margin-top: 50%;
+        margin-left: 35px;
+        color: whitesmoke;
+      }
+
+
+      .img3{
+        display: block;
+        height: 250px;
+        width: 180px;
+      }
+      .overly3{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 100%;
+        height: 250px;
+        width: 0px;
+        background-color:tomato;
+        overflow: hidden;
+        transition: .5s ease;
+      }
+      .container:hover .overly3{
+      width: 180px;
+      }
+      .text3{
+        white-space: nowrap;
+        font-size: 20px;
+        margin-top: 50%;
+        margin-left: 35px;
+        color: whitesmoke;
+        position: absolute;
+        overflow: hidden;
+      }
+
+      .img4{
+        display: block;
+        height: 250px;
+        width: 180px;
+      }
+      .overly4{
+        position: absolute;
+        top: 0;
+        left: 100%;
+        right: 0px;
+        height: 250px;
+        width: 0px;
+        background-color:darkgoldenrod;
+        overflow: hidden;
+        transition: .5s ease;
+      }
+      .container:hover .overly4{
+      width: 180px;
+      left: 0px;
+      }
+      .text4{
+        white-space: nowrap;
+        font-size: 20px;
+        margin-top: 50%;
+        margin-left: 35px;
+        color: whitesmoke;
+        position: absolute;
+        overflow: hidden;
+      }
+    </style>
+</head>
+  <div class="container">
+    <img src="a.jpg" alt="" class="image">
+    <div class="overly">
+      <div class="text">Hello World</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="a.jpg" alt="" class="images">
+    <div class="overlyy">
+      <div class="texts"><a href="#">Shahin</a></div>
+    </div>
+    </div>
+
+    <div class="container">
+      <img src="a.jpg" alt="" class="img1">
+      <div class="overly1">
+        <div class="text1">Hello world</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <img src="a.jpg" alt="" class="img2">
+      <div class="overly2">
+        <div class="text2">Hello world</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <img src="a.jpg" alt="" class="img3">
+      <div class="overly3">
+        <div class="text3">Hello world</div>
+      </div>
+    </div>
+
+    <div class="container">
+      <img src="a.jpg" alt="" class="img4">
+      <div class="overly4">
+        <div class="text4">Hello world</div>
+      </div>
+    </div>
+
+  </div>
+</body>
+</html>
