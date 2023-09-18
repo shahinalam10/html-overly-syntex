@@ -186,6 +186,133 @@
         position: absolute;
         overflow: hidden;
       }
+
+
+
+
+        .button{
+         display: inline-block;
+         border-radius: 3px;
+         background-color:orangered;
+         border: none;
+         color: white;
+         text-align: center;
+         font-size: larger;
+         padding: 20px;
+         width: 150px;
+         transition: all .4s;
+         cursor: pointer;
+         
+      }
+      button span{
+         cursor: pointer;
+         display: inline-block;
+         position: relative;
+         transition: .4s;
+      }
+      .button span::after{
+         content: '\00bb';
+         position:absolute;
+         opacity: 0;
+         top: 0;
+         right: -20px;
+         transition: .4s;
+      }
+      .button:hover span{
+         padding-right: 25px;
+      }
+      .button:hover span::after{
+         right: 0;
+         opacity: 1;
+      }
+
+
+      .button1{
+         background-color: black;
+         color: white;
+         border: none;
+         border-radius: 2px;
+         padding:20px;
+         width: 150px;
+         transition: all .4s;
+         text-align: center;
+      }
+      .button1 span{
+         position: relative;
+         display: inline-block;
+         transition: .4s;
+         font-size: large;
+      }
+      .button1 span::after{
+         content: '\00bb';
+         position:absolute;
+         top: 0;
+         left: -20px;
+         opacity: 0;
+         transition: .4s;
+      }
+      .button1:hover span{
+         padding-left: 25px;
+      }
+      .button1:hover span::after{
+         left: 0;
+         opacity: 1;
+      }
+
+
+      .btn{
+         display: inline-block;
+         padding:14px 18px;
+         font-size: 20px;
+         margin: 5px;
+         cursor: pointer;
+         text-align: center;
+         outline: none;
+         border: none;
+         border-radius: 15px;
+         background-color: rgba(0, 128, 0, 0.76);
+         color:whitesmoke;
+         box-shadow: 0px 9px gray;
+      }
+      .btn:hover{
+         background-color: green;
+      }
+      .btn:active{
+         background-color: green;
+         box-shadow: 0px 5px rgba(0, 0, 0, 0.733);
+         transform: translateY(4px);
+      }
+
+      .btn1{
+         background-color:crimson;
+         color: white;
+         padding: 17px;
+         border: none;
+         font-size: large;
+         border-radius: 5px;
+         position: relative;
+         text-align: center;
+         overflow: hidden;
+         cursor: pointer;
+      }
+      .btn1::after{
+         content: '';
+         background-color: wheat;
+         display: block;
+         position: absolute;
+         padding-top: 300%;
+         padding-left: 350px;
+         margin-left: -20px !important;
+         margin-top: -120%;
+         transition: all 0.8s;
+         opacity: 0;
+      }
+      .btn1:active::after{
+         padding: 0;
+         margin: 0;
+         opacity: 1;
+         transition: 0s;
+      }
     </style>
 </head>
   <div class="container">
@@ -229,7 +356,12 @@
         <div class="text4">Hello world</div>
       </div>
     </div>
-
   </div>
+    <hr>
+
+  <button class="button" style="vertical-align: middle;"><span>Hover</span></button>
+  <button class="button1" style="vertical-align: middle;"><span>Home</span></button>
+  <button class="btn">Click me</button>
+  <button class="btn1">Save me</button>  
 </body>
 </html>
