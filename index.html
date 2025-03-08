@@ -4,145 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Optimized Hover Effects and Buttons</title>
-    <style>
-        /* General Container and Image Styles */
-        .container {
-            position: relative;
-            width: 180px;
-            float: left;
-            margin-left: 10px;
-            overflow: hidden;
-        }
-
-        .container img {
-            display: block;
-            height: 250px;
-            width: 180px;
-            transition: opacity 0.5s ease;
-        }
-
-        /* Overlay and Text Styles */
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(220, 20, 60, 0.8);
-            color: whitesmoke;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.5s ease;
-        }
-
-        .container:hover .overlay {
-            opacity: 1;
-        }
-
-        .text {
-            font-size: 20px;
-            text-align: center;
-        }
-
-        /* Specific Overlay Effects */
-        .overlay1 { background-color: rgba(220, 20, 60, 0.8); }
-        .overlay2 { background-color: rgba(255, 99, 71, 0.8); }
-        .overlay3 { background-color: rgba(255, 99, 71, 0.8); }
-        .overlay4 { background-color: rgba(184, 134, 11, 0.8); }
-
-        /* Button Styles */
-        .button {
-            display: inline-block;
-            padding: 15px 30px;
-            font-size: 18px;
-            color: white;
-            background-color: orangered;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.3s ease;
-            margin: 10px;
-            text-align: center;
-            overflow: hidden;
-            position: relative;
-        }
-
-        .button span {
-            position: relative;
-            transition: padding 0.3s ease;
-        }
-
-        .button span::after {
-            content: '\00bb';
-            position: absolute;
-            opacity: 0;
-            top: 0;
-            right: -20px;
-            transition: opacity 0.3s ease, right 0.3s ease;
-        }
-
-        .button:hover {
-            background-color: darkorange;
-            transform: translateY(-2px);
-        }
-
-        .button:hover span {
-            padding-right: 25px;
-        }
-
-        .button:hover span::after {
-            opacity: 1;
-            right: 0;
-        }
-
-        .button1 {
-            background-color: black;
-        }
-
-        .button1:hover {
-            background-color: #333;
-        }
-
-        .btn {
-            background-color: rgba(0, 128, 0, 0.76);
-            box-shadow: 0px 4px 0px darkgreen;
-        }
-
-        .btn:hover {
-            background-color: green;
-        }
-
-        .btn:active {
-            box-shadow: 0px 2px 0px darkgreen;
-            transform: translateY(2px);
-        }
-
-        .btn1 {
-            background-color: crimson;
-        }
-
-        .btn1::after {
-            content: '';
-            background-color: rgba(255, 255, 255, 0.3);
-            display: block;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            width: 300%;
-            height: 300%;
-            border-radius: 50%;
-            transform: translate(-50%, -50%) scale(0);
-            transition: transform 0.5s ease, opacity 0.5s ease;
-            opacity: 0;
-        }
-
-        .btn1:active::after {
-            transform: translate(-50%, -50%) scale(1);
-            opacity: 1;
-        }
-    </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Image Hover Effects -->
@@ -174,13 +36,19 @@
         </div>
     </div>
 
-    <div style="clear: both;"></div>
-    <hr><br>
+    <!-- Clear floats -->
+    <div class="clearfix"></div>
+
+    <!-- Horizontal line -->
+    <hr>
 
     <!-- Buttons -->
-    <button class="button"><span>Hover</span></button>
-    <button class="button button1"><span>Home</span></button>
-    <button class="button btn">Click Me</button>
-    <button class="button btn1">Save Me</button>
+    <div style="text-align: center; margin-top: 20px;">
+        <button class="button" id="bounceBtn"><span>Bounce</span></button>
+        <button class="button button1" id="shakeBtn"><span>Shake</span></button>
+        <button class="button btn" id="pulseBtn"><span>Pulse</span></button>
+        <button class="button btn1"><span>Save Me</span></button>
+    </div>
 </body>
+    <scriot src=main.js></scriot>
 </html>
