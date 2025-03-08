@@ -3,52 +3,366 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Optimized Hover Effects and Buttons</title>
-  <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <style>
+      .container{
+        position: relative;
+        width: 180px;
+        float: left;
+        margin-left: 10px;
+      }
+      .image{
+        display: block;
+        height: 250px;
+        width: 180px;
+      }
+      .overly{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        height: 250px;
+        width: 180px;
+        opacity: 0;
+        transition: 1s ease;
+        background-color: crimson;
+      }
+      .container:hover .overly{
+        opacity: 1;
+      }
+      .text{
+        color: whitesmoke;
+        font-size: 20px;
+        position: absolute;
+        top: 40%;
+        margin-left: 30px;
+       
+      }
+
+
+      .images{
+        opacity: 1;
+        display: block;
+        height: 250px;
+        width: 180px;
+        transition: .5s ease;
+        backface-visibility: hidden;
+      }
+      .overlyy{
+        position:absolute;
+        top: 40%;
+        left: 30%;
+        opacity: 0;
+        transition: .5s ease;
+      }
+      .container:hover .images{
+        opacity: 0.3;
+      }
+      .container:hover .overlyy{
+        opacity: 1;
+      }
+      .texts a{
+        background-color:black;
+        color: whitesmoke;
+        padding: 10px;
+        font-size: 20px;
+        text-decoration: none;
+        border-radius:10%;
+      }
+
+      .img1{
+        display: block;
+        height: 250px;
+        width: 180px;
+      }
+      .overly1{
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        right: 0;
+        height: 0px;
+        width: 180px;
+        background-color: crimson;
+        transition: .5s ease;
+        overflow: hidden;
+      }
+      .container:hover .overly1{
+        bottom: 0;
+        height: 100%;
+      }
+      .text1{
+        white-space: nowrap;
+        font-size: 20px;
+        margin-top: 50%;
+        margin-left: 35px;
+        color: whitesmoke;
+      }
+
+      .img2{
+        display: block;
+        height: 250px;
+        width: 180px;
+      }
+      .overly2{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        height: 0px;
+        width: 180px;
+        background-color:tomato;
+        overflow: hidden;
+        transition: .5s ease;
+      }
+      .container:hover .overly2{
+        top:0px;
+        height: 100%;
+      }
+      .text2{
+        white-space: nowrap;
+        font-size: 20px;
+        margin-top: 50%;
+        margin-left: 35px;
+        color: whitesmoke;
+      }
+
+
+      .img3{
+        display: block;
+        height: 250px;
+        width: 180px;
+      }
+      .overly3{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 100%;
+        height: 250px;
+        width: 0px;
+        background-color:tomato;
+        overflow: hidden;
+        transition: .5s ease;
+      }
+      .container:hover .overly3{
+      width: 180px;
+      }
+      .text3{
+        white-space: nowrap;
+        font-size: 20px;
+        margin-top: 50%;
+        margin-left: 35px;
+        color: whitesmoke;
+        position: absolute;
+        overflow: hidden;
+      }
+
+      .img4{
+        display: block;
+        height: 250px;
+        width: 180px;
+      }
+      .overly4{
+        position: absolute;
+        top: 0;
+        left: 100%;
+        right: 0px;
+        height: 250px;
+        width: 0px;
+        background-color:darkgoldenrod;
+        overflow: hidden;
+        transition: .5s ease;
+      }
+      .container:hover .overly4{
+      width: 180px;
+      left: 0px;
+      }
+      .text4{
+        white-space: nowrap;
+        font-size: 20px;
+        margin-top: 50%;
+        margin-left: 35px;
+        color: whitesmoke;
+        position: absolute;
+        overflow: hidden;
+      }
+
+
+
+
+        .button{
+         display: inline-block;
+         border-radius: 3px;
+         background-color:orangered;
+         border: none;
+         color: white;
+         text-align: center;
+         font-size: larger;
+         padding: 20px;
+         width: 150px;
+         transition: all .4s;
+         cursor: pointer;
+         
+      }
+      button span{
+         cursor: pointer;
+         display: inline-block;
+         position: relative;
+         transition: .4s;
+      }
+      .button span::after{
+         content: '\00bb';
+         position:absolute;
+         opacity: 0;
+         top: 0;
+         right: -20px;
+         transition: .4s;
+      }
+      .button:hover span{
+         padding-right: 25px;
+      }
+      .button:hover span::after{
+         right: 0;
+         opacity: 1;
+      }
+
+
+      .button1{
+         background-color: black;
+         color: white;
+         border: none;
+         border-radius: 2px;
+         padding:20px;
+         width: 150px;
+         transition: all .4s;
+         text-align: center;
+      }
+      .button1 span{
+         position: relative;
+         display: inline-block;
+         transition: .4s;
+         font-size: large;
+      }
+      .button1 span::after{
+         content: '\00bb';
+         position:absolute;
+         top: 0;
+         left: -20px;
+         opacity: 0;
+         transition: .4s;
+      }
+      .button1:hover span{
+         padding-left: 25px;
+      }
+      .button1:hover span::after{
+         left: 0;
+         opacity: 1;
+      }
+
+
+      .btn{
+         display: inline-block;
+         padding:14px 18px;
+         font-size: 20px;
+         margin: 5px;
+         cursor: pointer;
+         text-align: center;
+         outline: none;
+         border: none;
+         border-radius: 15px;
+         background-color: rgba(0, 128, 0, 0.76);
+         color:whitesmoke;
+         box-shadow: 0px 9px gray;
+      }
+      .btn:hover{
+         background-color: green;
+      }
+      .btn:active{
+         background-color: green;
+         box-shadow: 0px 5px rgba(0, 0, 0, 0.733);
+         transform: translateY(4px);
+      }
+
+      .btn1{
+         background-color:crimson;
+         color: white;
+         padding: 17px;
+         border: none;
+         font-size: large;
+         border-radius: 5px;
+         position: relative;
+         text-align: center;
+         overflow: hidden;
+         cursor: pointer;
+      }
+      .btn1::after{
+         content: '';
+         background-color: wheat;
+         display: block;
+         position: absolute;
+         padding-top: 300%;
+         padding-left: 350px;
+         margin-left: -20px !important;
+         margin-top: -120%;
+         transition: all 0.8s;
+         opacity: 0;
+      }
+      .btn1:active::after{
+         padding: 0;
+         margin: 0;
+         opacity: 1;
+         transition: 0s;
+      }
+    </style>
 </head>
-<body>
-    <!-- Image Hover Effects -->
-    <div class="container">
-        <img src="a.jpg" alt="Image 1">
-        <div class="overlay overlay1">
-            <div class="text">Hello World</div>
-        </div>
+  <div class="container">
+    <img src="a.jpg" alt="" class="image">
+    <div class="overly">
+      <div class="text">Hello World</div>
+    </div>
+  </div>
+
+  <div class="container">
+    <img src="a.jpg" alt="" class="images">
+    <div class="overlyy">
+      <div class="texts"><a href="#">Shahin</a></div>
+    </div>
     </div>
 
     <div class="container">
-        <img src="a.jpg" alt="Image 2">
-        <div class="overlay overlay2">
-            <div class="text">Hello World</div>
-        </div>
+      <img src="a.jpg" alt="" class="img1">
+      <div class="overly1">
+        <div class="text1">Hello world</div>
+      </div>
     </div>
 
     <div class="container">
-        <img src="a.jpg" alt="Image 3">
-        <div class="overlay overlay3">
-            <div class="text">Hello World</div>
-        </div>
+      <img src="a.jpg" alt="" class="img2">
+      <div class="overly2">
+        <div class="text2">Hello world</div>
+      </div>
     </div>
 
     <div class="container">
-        <img src="a.jpg" alt="Image 4">
-        <div class="overlay overlay4">
-            <div class="text">Hello World</div>
-        </div>
+      <img src="a.jpg" alt="" class="img3">
+      <div class="overly3">
+        <div class="text3">Hello world</div>
+      </div>
     </div>
 
-    <!-- Clear floats -->
-    <div class="clearfix"></div>
-
-    <!-- Horizontal line -->
-    <hr>
-
-    <!-- Buttons -->
-    <div style="text-align: center; margin-top: 20px;">
-        <button class="button" id="bounceBtn"><span>Bounce</span></button>
-        <button class="button button1" id="shakeBtn"><span>Shake</span></button>
-        <button class="button btn" id="pulseBtn"><span>Pulse</span></button>
-        <button class="button btn1"><span>Save Me</span></button>
+    <div class="container">
+      <img src="a.jpg" alt="" class="img4">
+      <div class="overly4">
+        <div class="text4">Hello world</div>
+      </div>
     </div>
+  </div>
+    <hr><br>
+
+  <button class="button" style="vertical-align: middle;"><span>Hover</span></button>
+  <button class="button1" style="vertical-align: middle;"><span>Home</span></button>
+  <button class="btn">Click me</button>
+  <button class="btn1">Save me</button>  
 </body>
-    <scriot src=main.js></scriot>
 </html>
+eta ke polish kore dite paro? with optimization. button structure gulu o sundor kore dao
